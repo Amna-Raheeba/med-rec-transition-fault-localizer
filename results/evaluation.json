@@ -1,0 +1,188 @@
+{
+  "config": {
+    "check_efficacy": 0.8,
+    "n_patients": 120,
+    "seed": 20261121
+  },
+  "corpus": {
+    "faults_injected": 374,
+    "instances_appeared": 374,
+    "instances_surviving": 316,
+    "mean_surviving_per_journey": 2.6333,
+    "n_journeys": 120,
+    "surviving_by_type": {
+      "addition": 58,
+      "dose_drift": 78,
+      "duplication": 35,
+      "omission": 88,
+      "resurrection": 17,
+      "substitution": 40
+    }
+  },
+  "detection": {
+    "end_to_end": {
+      "f1": 0.5256,
+      "fn": 75,
+      "fp": 360,
+      "precision": 0.401,
+      "recall": 0.7627,
+      "tp": 241
+    },
+    "localizer": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 316
+    }
+  },
+  "interventions": {
+    "check_at_admission": {
+      "efficacy": 0.8,
+      "mean_exposure_steps_per_journey": 3.475,
+      "mean_survivors_per_journey": 2.0333,
+      "placement": 1
+    },
+    "check_at_discharge": {
+      "efficacy": 0.8,
+      "mean_exposure_steps_per_journey": 3.5333,
+      "mean_survivors_per_journey": 0.5167,
+      "placement": 3
+    },
+    "check_at_transfer": {
+      "efficacy": 0.8,
+      "mean_exposure_steps_per_journey": 2.6167,
+      "mean_survivors_per_journey": 1.2167,
+      "placement": 2
+    },
+    "no_check": {
+      "efficacy": 0.8,
+      "mean_exposure_steps_per_journey": 5.65,
+      "mean_survivors_per_journey": 2.6333,
+      "placement": null
+    }
+  },
+  "localization": {
+    "blame_last_transition": {
+      "accuracy": 0.3861,
+      "accuracy_matched_only": 0.3861,
+      "birth_correct": 122,
+      "matched": 316,
+      "n_found": 316,
+      "n_truth": 316,
+      "per_type": {
+        "addition": {
+          "accuracy": 0.4828,
+          "birth_correct": 28,
+          "n": 58
+        },
+        "dose_drift": {
+          "accuracy": 0.3205,
+          "birth_correct": 25,
+          "n": 78
+        },
+        "duplication": {
+          "accuracy": 0.4286,
+          "birth_correct": 15,
+          "n": 35
+        },
+        "omission": {
+          "accuracy": 0.3295,
+          "birth_correct": 29,
+          "n": 88
+        },
+        "resurrection": {
+          "accuracy": 0.7059,
+          "birth_correct": 12,
+          "n": 17
+        },
+        "substitution": {
+          "accuracy": 0.325,
+          "birth_correct": 13,
+          "n": 40
+        }
+      }
+    },
+    "localizer_full": {
+      "accuracy": 1.0,
+      "accuracy_matched_only": 1.0,
+      "birth_correct": 316,
+      "matched": 316,
+      "n_found": 316,
+      "n_truth": 316,
+      "per_type": {
+        "addition": {
+          "accuracy": 1.0,
+          "birth_correct": 58,
+          "n": 58
+        },
+        "dose_drift": {
+          "accuracy": 1.0,
+          "birth_correct": 78,
+          "n": 78
+        },
+        "duplication": {
+          "accuracy": 1.0,
+          "birth_correct": 35,
+          "n": 35
+        },
+        "omission": {
+          "accuracy": 1.0,
+          "birth_correct": 88,
+          "n": 88
+        },
+        "resurrection": {
+          "accuracy": 1.0,
+          "birth_correct": 17,
+          "n": 17
+        },
+        "substitution": {
+          "accuracy": 1.0,
+          "birth_correct": 40,
+          "n": 40
+        }
+      }
+    },
+    "localizer_missing_transfer": {
+      "accuracy": 0.6772,
+      "accuracy_matched_only": 0.6859,
+      "birth_correct": 214,
+      "matched": 312,
+      "n_found": 317,
+      "n_truth": 316,
+      "per_type": {
+        "addition": {
+          "accuracy": 0.7586,
+          "birth_correct": 44,
+          "n": 58
+        },
+        "dose_drift": {
+          "accuracy": 0.6795,
+          "birth_correct": 53,
+          "n": 78
+        },
+        "duplication": {
+          "accuracy": 0.7714,
+          "birth_correct": 27,
+          "n": 35
+        },
+        "omission": {
+          "accuracy": 0.6023,
+          "birth_correct": 53,
+          "n": 88
+        },
+        "resurrection": {
+          "accuracy": 0.7059,
+          "birth_correct": 12,
+          "n": 17
+        },
+        "substitution": {
+          "accuracy": 0.625,
+          "birth_correct": 25,
+          "n": 40
+        }
+      }
+    }
+  }
+}
