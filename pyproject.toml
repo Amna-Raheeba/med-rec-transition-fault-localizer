@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "med-rec-transition-fault-localizer"
+version = "0.1.0"
+description = "Where was this error born? A seeded simulator of medication reconciliation across care transitions that traces each medication's lineage through home, admission, transfer and discharge lists, plants discrepancies at known transitions, and benchmarks a step-level fault localizer -- a discrepancy genealogy -- against blame-the-last-transition and end-to-end diffing, with double-check interventions priced by placement."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Amna Raheeba" }]
+
+[tool.setuptools]
+packages = ["med_rec"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
